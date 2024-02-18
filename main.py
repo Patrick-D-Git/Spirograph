@@ -12,11 +12,12 @@ tim.circle(100)
 
 
 def random_color():
+    """ Returns a tuple with three random generated numbers"""
     r = random.randint(1, 255)
     g = random.randint(1, 255)
     b = random.randint(1, 255)
-    rgb = (r, g, b)
-    return rgb
+    color = (r, g, b)
+    return color
 
 
 angle = 0
