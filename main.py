@@ -20,20 +20,15 @@ def random_color():
     return color
 
 
-angle = 0
-make_circle = True
-
-while make_circle:
-
-    if angle >= 360:
-        make_circle = False
-
-    else:
+def spirograph(gap):
+    """Creates the Spirograph"""
+    for _ in range(int(360 / gap)):
+        angle = tim.heading() + gap
         tim.pencolor(random_color())
         tim.setheading(angle)
         tim.circle(100)
-        angle += 2
-        print(angle)
 
+
+spirograph(5)  # calls the spirograph function where you can input a gap of your choice.
 
 screen.exitonclick()
